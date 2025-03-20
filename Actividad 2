@@ -1,0 +1,13 @@
+#include  <stdio.h>
+#include  <stdlib.h>
+
+int main (){
+//quiero imprimir la suma de 5 mas 8
+printf ("%d \n",5+8);
+printf("la suma de %d + %d es = %d\n",5,8,5+8);
+//quiero imprimir la suma de 78787 mas 3259
+printf("%d \n",78787+3259);
+printf("la suma de %d + %d es = %d\n",78787,3259,78787+3259);
+system("Pause");
+return 0;
+}

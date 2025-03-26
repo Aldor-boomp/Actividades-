@@ -1,0 +1,15 @@
+#include  <stdio.h>
+#include  <stdlib.h>
+int main (){
+int numero;
+int suma=0;
+int i;
+printf("ingresa un numero:");
+scanf(" %d ", &numero);
+for(i=1; i<=numero; i++){
+suma=suma+i;
+printf("%d,",suma);
+}
+system("Pause");
+return 0;
+}

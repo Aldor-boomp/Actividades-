@@ -1,0 +1,23 @@
+#include  <stdio.h>
+#include  <stdlib.h>
+int main (){
+printf("****** AND ******\n");
+printf(" ture && ture : %d\n",(1 &&1));
+printf(" ture && false : %d\n",(1 &&0));
+printf(" false && ture : %d\n",(0 &&1));
+printf(" false && false : %d\n",(0 &&0));
+
+printf("****** OR ******\n");
+printf(" ture || ture : %d\n",(1 ||1));
+printf(" ture || false : %d\n",(1 ||0));
+printf(" false || ture : %d\n",(0 ||1));
+printf(" false || false : %d\n",(0||0));
+
+printf("****** XOR ******\n");
+printf(" ture ^ ture : %d\n",(1 ^1));
+printf(" ture ^ false : %d\n",(1 ^0));
+printf(" false ^ ture : %d\n",(0 ^1));
+printf(" false ^ false : %d\n",(0 ^0));
+system("Pause");
+return 0;
+}

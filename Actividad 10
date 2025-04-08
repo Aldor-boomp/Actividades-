@@ -1,0 +1,7 @@
+#include <stdio.h>
+int main() {
+float resultado;
+resultado = 5.138 + (2.0 / 1) + (1 + (2.0 / (2 - 0.25)));
+printf("resultado:%.2f\n",resultado);
+return 0;
+}

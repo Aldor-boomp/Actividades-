@@ -1,0 +1,22 @@
+#include  <stdio.h>
+#include  <stdlib.h>
+float maximo(float a, float b);
+int main (){
+float a,b,max;
+printf("Ingresa una numero: ");
+scanf("%f", &a);
+printf("Ingresa una numero: ");
+scanf("%f", &b);
+max=maximo(a,b);
+printf("%f",max);
+system("Pause");
+return 0;
+}
+float maximo(float a, float b){
+if(a<b){
+printf("%f es mayor",b);
+}else{
+printf("%f es mayor",a);
+}
+return max;
+}

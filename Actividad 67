@@ -1,0 +1,8 @@
+#include  <stdio.h>
+#include  <stdlib.h>
+int main() {
+    int x;
+    printf("El valor de x es %p", &x);
+system("Pause");
+return 0;
+}

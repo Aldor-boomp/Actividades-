@@ -1,0 +1,33 @@
+#include  <stdio.h>
+#include  <stdlib.h>
+#include <string.h>
+
+struct CD{
+    char titulo[100];
+    char artista[50];
+    char num_can[100];
+    char anio[100];
+    char precio[100];
+};
+
+int main(void){
+    struct CD cd1;
+    printf("ingresa el titulo\n");
+    gets(cd1.titulo);
+    printf("ingresa el artista\n");
+    gets(cd1.artista);
+    printf("ingresa el numero de canciones \n");
+    gets(cd1.num_can);
+    printf("ingresa el anio\n");
+    gets(cd1.anio);
+    printf("ingresa el precio \n");
+    gets(cd1.precio);
+    printf("titulo: %s\n", cd1.titulo);
+    printf("artista: %s\n", cd1.artista);
+    printf("numero de canciones: %s\n", cd1.num_can);
+    printf("anio: %s\n", cd1.anio);
+    printf("precio: %s\n", cd1.precio);
+    
+    system("Pause");
+    return 0;
+}

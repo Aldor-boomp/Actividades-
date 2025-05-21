@@ -1,0 +1,17 @@
+#include <time.h>
+#include <stdio.h>
+
+int main() {
+    clock_t start = clock();
+
+    int x=17, y;
+    printf  ("El valor de x es: %d \n", x);
+    y=x+3;
+    printf("El valor de y es:%d\n",y);
+
+    clock_t end = clock();
+    double elapsed_time = (double)(end - start) /clocks_milseg;
+
+    printf("Tiempo: %f segundos\n", elapsed_time);
+    return 0;
+}

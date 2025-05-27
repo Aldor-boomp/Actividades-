@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <time.h>
+
+int main() {
+    int x = 17, y;
+    clock_t start = clock();
+
+    y = x + 3;
+
+    clock_t end = clock();
+    double elapsed = (double)(end - start) / CLOCKS_PER_SEC;
+
+    printf("y = %d\n", y);
+    printf("Tiempo con clock(): %f segundos\n", elapsed);
+    return 0;
+}

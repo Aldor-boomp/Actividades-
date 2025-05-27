@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+uint64_t rdtsc(){
+    unsigned int lo, hi;
+    __asm__ volatile (
+        "rdtsc"
+        : "=a" (lo), "=d" (hi)
+    );
+    return ((uint64_t)hi << 32) | lo;
+}
+
+int main() {
+    uint64_t start = rdtsc();
+
+    int x=17, y;
+    printf  ("El valor de x es: %d \n", x);
+    y=x+3;
+    printf("El valor de y es:%d\n",y);
+    for (volatile int i = 0; i < 1000000; i++);
+
+    uint64_t end = rdtsc();
+
+    printf("Ciclos de reloj: %llu\n", end - start);
+    return 0;
+}

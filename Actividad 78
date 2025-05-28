@@ -1,0 +1,17 @@
+#include <iostream>
+#include <chrono>
+
+int main() {
+    int x = 17, y;
+    auto start = std::chrono::high_resolution_clock::now();
+
+    y = x + 3;
+
+    auto end = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double, std::nano> elapsed = end - start;
+
+    std::cout << "y = " << y << std::endl;
+    std::cout << "Tiempo con chrono: " << elapsed.count() << " nanosegundos\n";
+
+    return 0;
+}

@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <time.h>
+
+int main() {
+    int valor = 9;
+    int *ptr = &valor;
+    int resultado;
+    clock_t inicio, fin;
+    long tiempo;
+
+   
+    inicio = clock();
+    for (int i = 0; i <20000; i++) {
+        resultado = valor + 7;
+    }
+    fin = clock();
+    tiempo = fin - inicio;
+    printf("Tiempo sin puntero: %ld segundos\n", tiempo);
+
+    
+    inicio = clock();
+    for (int i = 0; i < 20000; i++) {
+        resultado = *ptr + 7;
+    }
+    fin = clock();
+    tiempo = fin - inicio;
+    printf("Tiempo con puntero: %ld segundos\n", tiempo);
+
+    return 0;
+}

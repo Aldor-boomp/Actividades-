@@ -1,0 +1,12 @@
+#include  <stdio.h>
+#include  <stdlib.h>
+int main (){
+    char cadena[10];
+printf("un int ocupa %d bits\n",sizeof(int));
+printf("un char ocupa %d bits\n",sizeof(char));
+printf("un float ocupa %d bits\n",sizeof(float));
+printf("un double ocupa %d bits\n",sizeof(double));
+printf("cadena ocupa %d bits\n",sizeof(cadena));
+system("Pause");
+return 0;
+}

@@ -1,0 +1,38 @@
+#include  <stdio.h>
+#include  <stdlib.h>
+int suma(int a, int b); 
+int resta(int a, int b); 
+int mul(int a, int b);
+float division(float a, float b);
+    int suma(int a, int b) {
+        return a + b;}
+    int resta(int a, int b) 
+        { return a - b;}
+    int mul (int a, int b) {
+         return a * b;}
+    float division (float a, float b) {
+        return a / b;}
+
+int main () {
+    int o, a, b; float div;
+do{
+    printf ("CALCULADORA\n\n") ;
+     printf("\n1. Suma\n2. Resta\n3. Multiplicacion\n4.                     Division\n5.Cerrar\nElija una operacion:");
+        scanf ("%d", &o);
+if (o!=5){
+    printf("Ingresa el primer valor: ");
+        scanf ("%d", &a);
+    printf("Ingresa el segundo valor: ");
+        scanf ("%d", &b);
+    if (o==1){
+    printf("La suma de %d + %d = %d\n", a, b, suma(a,b));}
+    else if(o==2){
+    printf("La resta de %d - %d = %d\n", a, b, resta(a,b));}
+    else if(o==3){
+    printf("La multiplicacion de %d x %d = %d\n"
+    , a, b, mul(a,b));
+    } else {printf("La division de %d / %d = %.2f\n", a, b,                 division (a,b));}
+    } else {printf("fin");}
+} while(o!=5);
+return 0;
+}

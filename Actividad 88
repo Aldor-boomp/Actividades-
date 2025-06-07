@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <time.h>
+uint64_t rdtsc(){
+    unsigned int lo, hi;
+    __asm__ volatile (
+        "rdtsc"
+        : "=a" (lo), "=d" (hi)
+    );
+    return ((uint64_t)hi << 32) | lo;
+}
+
+int main() {
+    int x = 17, y;
+    uint64_t start = rdtsc();
+
+    y = x + 3;
+
+    uint64_t end = rdtsc();
+
+    printf("y = %d\n", y);
+    printf("Ciclos de reloj con rdtsc: %llu\n", end - start);
+    return 0;
+}

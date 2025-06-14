@@ -1,0 +1,21 @@
+#include  <stdio.h>
+#include  <stdlib.h>
+int main (){
+    int x, n;
+    int *apu;
+    printf("Teclea la longitud del arreglo: ");
+    scanf("%d", &x);
+    apu=(int*)malloc((x+1)*sizeof(int));
+    if (apu==NULL) exit(1);
+    for(n=0; n<x; n++){
+        printf("ingresa los dotos del arreglo en la posicion %d:\n", n);
+    scanf("%d", &apu[n]);
+    }
+    printf("los datos son\n");
+    for(n=0; n<x; n++){
+        printf("%d\n", apu[n]);
+    }
+    free(apu);
+system("Pause");
+return 0;
+}
